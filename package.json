@@ -1,0 +1,27 @@
+{
+  "name": "pizza",
+  "version": "0.0.1",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "create": "claudia create --region eu-central-1 --api-module api",
+    "update": "claudia update",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtemNikolaev/pizza-from-marie.git"
+  },
+  "author": "Artem Nikolaev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtemNikolaev/pizza-from-marie/issues"
+  },
+  "homepage": "https://github.com/ArtemNikolaev/pizza-from-marie#readme",
+  "devDependencies": {
+    "claudia": "^5.12.0"
+  },
+  "dependencies": {
+    "claudia-api-builder": "^4.1.2"
+  }
+}
