@@ -1,17 +1,17 @@
 const Api = require('claudia-api-builder');
 const api = new Api();
 
-const getPizzas = require('./handlers/get-pizzas');
+const getOrders = require('./handlers/get-orders');
 const createOrder = require('./handlers/create-order');
 
 api.get('/', () => 'Welcome to Pizza API!');
-api.get('/pizzas', () => getPizzas());
+
+api.get('/orders', () => getOrders());
 api.get(
-  '/pizzas/{id}',
-  (req) => getPizzas(req.pathParams.id),
+  '/orders/{id}',
+  (req) => getOrders(req.pathParams.id),
   { error: 404 },
 );
-
 api.post(
 	'/orders',
 	request => createOrder(request.body),
