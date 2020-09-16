@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
 const docClient = new AWS.DynamoDB.DocumentClient();
-const uuid = require('uuid');
+const uuid = require('uuid').v4;
 
 function createOrder(order) {
 	if (!order || !order.pizza || !order.address) {
